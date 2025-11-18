@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/dusk.css';
+@import 'fumadocs-ui/css/preset.css';
+
+@theme inline {
+  --font-sans: var(--font-noto-sans);
+  --font-mono: var(--font-noto-mono);
+  --font-serif: var(--font-noto-serif);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-noto-sans);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+}
