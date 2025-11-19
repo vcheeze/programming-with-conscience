@@ -20,11 +20,20 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
-      {/* {page.data.lastModified && (
-        <p>{new Date(page.data.lastModified).toLocaleString()}</p>
-      )} */}
-      <DocsBody>
+      <DocsDescription className="mb-0">
+        {page.data.description}
+      </DocsDescription>
+      {page.data.lastModified && (
+        <p className="text-fd-muted-foreground text-end text-xs italic">
+          Last Updated:{" "}
+          {new Date(page.data.lastModified).toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })}
+        </p>
+      )}
+      <DocsBody className="mt-8">
         <MDX
           components={getMDXComponents({
             // this allows you to link to other pages with relative file paths
