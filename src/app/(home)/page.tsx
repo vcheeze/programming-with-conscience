@@ -33,7 +33,7 @@ export default function HomePage() {
             PROGRAMMING with CONSCIENCE (PwC)
           </p>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
             Beyond{" "}
             <span className="text-primary hover:text-primary/80">Linters</span>
             .
@@ -42,15 +42,17 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto">
-            This is an <strong>opinionated guide</strong> where we dissect
-            common programming anti-patterns and pet peeves, drawn from years of
-            reviewing and writing enterprise-grade code getting to production.
+            This is an{" "}
+            <strong className="text-foreground">opinionated guide</strong> where
+            we dissect common programming anti-patterns and pet peeves, drawn
+            from years of reviewing and writing enterprise-grade code getting to
+            production.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
             <Link
               href="/docs"
-              className="rounded-lg px-6 py-3 text-lg font-semibold text-primary-foreground bg-primary shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 w-full sm:w-auto text-center"
+              className="rounded-lg px-6 py-3 text-lg font-semibold text-primary-foreground bg-primary hover:bg-primary/80 shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 w-full sm:w-auto text-center"
             >
               Start Reading the Guide
             </Link>
