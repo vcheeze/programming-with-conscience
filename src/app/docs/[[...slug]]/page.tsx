@@ -21,9 +21,9 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
-      {page.data.lastModified && (
+      {/* {page.data.lastModified && (
         <p>{new Date(page.data.lastModified).toLocaleString()}</p>
-      )}
+      )} */}
       <DocsBody>
         <MDX
           components={getMDXComponents({
