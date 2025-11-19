@@ -1,30 +1,27 @@
 import { RootProvider } from "fumadocs-ui/provider/next";
-import { Noto_Sans, Noto_Sans_Mono, Noto_Serif } from "next/font/google";
+import {
+  Atkinson_Hyperlegible_Mono,
+  Atkinson_Hyperlegible_Next,
+} from "next/font/google";
 import "./global.css";
 
-const noto = Noto_Sans({
+const atkinson = Atkinson_Hyperlegible_Next({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-noto-sans",
+  variable: "--font-atkinson-sans",
 });
 
-const notoMono = Noto_Sans_Mono({
+const atkinsonMono = Atkinson_Hyperlegible_Mono({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-noto-mono",
-});
-
-const notoSerif = Noto_Serif({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-noto-serif",
+  variable: "--font-atkinson-mono",
 });
 
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${noto.variable} ${notoMono.variable} ${notoSerif.variable} antialiased`}
+      className={`${atkinson.variable} ${atkinsonMono.variable} antialiased`}
       suppressHydrationWarning
     >
       <body className="flex flex-col min-h-screen">
