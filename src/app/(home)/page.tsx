@@ -181,10 +181,10 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 4. Footer (Minimalist) */}
       <footer className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-muted-foreground">
