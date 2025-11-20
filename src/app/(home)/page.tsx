@@ -1,32 +1,43 @@
-import { Button } from "@/components/ui/button";
-import { DropletIcon, LightbulbIcon, MilestoneIcon } from "lucide-react";
+import {
+  CpuIcon,
+  LightbulbIcon,
+  MilestoneIcon,
+  MoveRightIcon,
+} from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
+
+import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
-  const FeatureCard = ({
-    icon,
-    title,
-    description,
-  }: {
-    icon: ReactNode;
-    title: string;
-    description: string;
-  }) => (
-    <div className="p-6 rounded-xl shadow-lg border transition-shadow hover:shadow-2xl">
-      <div className="text-primary hover:text-primary/80 mb-4 text-3xl">
-        {icon}
-      </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
-  );
+  const members = [
+    {
+      id: 1,
+      name: "Zaid H.",
+      role: "Tech Lead",
+      avatar:
+        "https://media.licdn.com/dms/image/v2/D4D03AQHMz9IMUUI6lg/profile-displayphoto-shrink_800_800/B4DZdOzw4LGkAk-/0/1749373882544?e=1765411200&v=beta&t=-h46I7O_hVPGOKCBf3LSQfXq84QwrjNp8te6m4PgRZo",
+      link: "https://linkedin.com/in/zaid-hassan-ithaca",
+    },
+    {
+      id: 2,
+      name: "Tarik Z.",
+      role: "???",
+      avatar:
+        "https://media.licdn.com/dms/image/v2/D4D03AQGJ-6M3_3BmTA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680726102874?e=1765411200&v=beta&t=0752z9tJ07sUpqMWkFxTb3LSz9x5acVQ1D1LJoFqXhs",
+      link: "https://www.linkedin.com/in/tarik-zulfikarpasic/",
+    },
+    {
+      id: 3,
+      name: "Peter C.",
+      role: "Lead SWE",
+      avatar:
+        "https://media.licdn.com/dms/image/v2/D4D03AQGxV8JC2d-CnQ/profile-displayphoto-crop_800_800/B4DZqgWZ7PKIAI-/0/1763626819928?e=1765411200&v=beta&t=xP9ouFRGXXhUEbAKrm-Xul49dA5zLHcKdqOyTRiWXwM",
+      link: "https://linkedin.com/in/peterweichen",
+    },
+  ];
 
   return (
-    // The main container simulates the Next.js/Fumadocs root wrapper
-    // NOTE: In a real Fumadocs setup, all indigo colors (e.g., indigo-600)
-    // should be replaced with the corresponding theme variables like
-    // text-[var(--fmdocs-primary-600)] or bg-[var(--fmdocs-primary-600)].
     <div className="min-h-screen antialiased font-inter">
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 text-center">
         <div className="max-w-4xl mx-auto">
@@ -38,7 +49,7 @@ export default function HomePage() {
             Beyond{" "}
             <span className="text-primary hover:text-primary/80">Linters</span>
             .
-            <br className="hidden sm:inline" />
+            <br />
             Code Review <span className="text-muted-foreground">Wisdom</span>.
           </h1>
 
@@ -51,47 +62,126 @@ export default function HomePage() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
-            <Button asChild className="px-6 py-3 w-full sm:w-auto">
-              <Link
-                href="/docs"
-                // className="rounded-lg px-6 py-3 text-lg font-semibold text-primary-foreground bg-primary hover:bg-primary/80 shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 w-full sm:w-auto text-center"
-              >
-                Start Reading the Guide
+            <Button
+              asChild
+              className="px-6 h-12 w-full sm:w-auto text-lg font-semibold"
+            >
+              <Link href="/docs">Start Reading the Guide</Link>
+            </Button>
+            <Button
+              asChild
+              variant="ghost"
+              className="px-6 h-12 w-full sm:w-auto text-lg font-semibold"
+            >
+              <Link href="#principles">
+                Our Guiding Principles <MoveRightIcon />
               </Link>
             </Button>
-            <Link
-              href="#principles"
-              className="text-lg font-semibold leading-6 hover:text-primary transition-colors duration-150 py-3 w-full sm:w-auto text-center"
-            >
-              Our Guiding Principles <span aria-hidden="true">→</span>
-            </Link>
           </div>
         </div>
       </main>
 
-      {/* 3. Principles Section (The "Why") */}
-      <section id="principles" className="py-16 bg-card border-t border-b">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-center mb-12">
-            What Sets <span className="text-primary">PwC</span> Apart?
-          </h2>
+      <section id="principles" className="py-12 md:py-20">
+        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
+          <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
+            <h2 className="text-balance text-4xl font-medium lg:text-5xl">
+              What Sets <span className="text-primary">PwC</span> Apart?
+            </h2>
+            <p>
+              Lyra is evolving to be more than just the models. It supports an
+              entire to the APIs and platforms helping developers and businesses
+              innovate.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard
-              icon={<LightbulbIcon className="stroke-primary size-8" />}
-              title="Operational Insight"
-              description="Our focus is on pitfalls run into ourselves—issues that break production systems, not just formatting rules."
-            />
-            <FeatureCard
-              icon={<DropletIcon className="stroke-primary size-8" />}
-              title="Beyond Static Analysis"
-              description="We go above and beyond what ESLint or linters tell you, focusing on subtle design and performance anti-patterns."
-            />
-            <FeatureCard
-              icon={<MilestoneIcon className="stroke-primary size-8" />}
-              title="Opinionated & Direct"
-              description="We offer clear, actionable recommendations based on years of experience writing and reviewing complex software systems."
-            />
+          <div className="relative mx-auto grid max-w-4xl divide-x divide-y border *:p-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <LightbulbIcon className="size-4" />
+                <h3 className="text-sm font-medium">Operational Insight</h3>
+              </div>
+              <p className="text-sm">
+                Our focus is on pitfalls run into ourselves—issues that break
+                production systems, not just formatting rules.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <CpuIcon className="size-4" />
+                <h3 className="text-sm font-medium">Beyond Static Analysis</h3>
+              </div>
+              <p className="text-sm">
+                We go above and beyond what ESLint or linters tell you, focusing
+                on subtle design and performance anti-patterns.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <MilestoneIcon className="size-4" />
+                <h3 className="text-sm font-medium">Opinionated & Direct</h3>
+              </div>
+              <p className="text-sm">
+                We offer clear, actionable recommendations based on years of
+                experience writing and reviewing complex software systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="py-16 md:py-32">
+        <div className="mx-auto max-w-5xl border-t px-6">
+          <span className="text-caption -ml-6 -mt-3.5 block w-max px-6 bg-background">
+            Team
+          </span>
+          <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
+            <div className="sm:w-2/5">
+              <h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
+            </div>
+            <div className="mt-6 sm:mt-0">
+              <p>
+                The minds behind PwC, in no particular order*, who unabashedly
+                recorded their opinions for posterity to prove wrong. Until
+                then, we assume we are right.
+              </p>
+              <p className="text-muted-foreground text-xs">
+                * actually, in order of age
+              </p>
+            </div>
+          </div>
+          <div className="mt-12 md:mt-24">
+            <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+              {members.map((member, index) => (
+                <div key={member.id} className="group overflow-hidden">
+                  <Image
+                    alt="team member"
+                    className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
+                    height="800"
+                    src={member.avatar}
+                    width="800"
+                  />
+                  <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
+                    <div className="flex justify-between">
+                      <h3 className="text-base font-medium transition-all duration-500 group-hover:tracking-wider">
+                        {member.name}
+                      </h3>
+                      <span className="text-xs">_0{index + 1}</span>
+                    </div>
+                    <div className="mt-1 flex items-center justify-between">
+                      <span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                        {member.role}
+                      </span>
+                      <Link
+                        href={member.link}
+                        className="group-hover:text-primary dark:group-hover:text-primary/80 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100"
+                      >
+                        LinkedIn
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div> */}
           </div>
         </div>
       </section>
