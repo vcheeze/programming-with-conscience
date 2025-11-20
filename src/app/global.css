@@ -1,22 +1,9 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/shadcn.css';
 @import 'fumadocs-ui/css/preset.css';
+@import "tw-animate-css";
 
-/* @theme inline {
-  --font-sans: var(--font-atkinson-sans);
-  --font-mono: var(--font-atkinson-mono);
-} */
-
-@layer base {
-  html {
-    font-size: 18px;
-  }
-
-  button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
-  }
-}
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: oklch(0.9575 0.0067 97.3531);
@@ -53,7 +40,7 @@
   --sidebar-ring: oklch(0.5212 0.1747 34.2177);
   --font-sans: var(--font-atkinson-sans);
   --font-mono: var(--font-atkinson-mono);
-  --radius: 0.65rem;
+  --radius: 0.625rem;
   --shadow-x: 0px;
   --shadow-y: 4px;
   --shadow-blur: 12px;
@@ -158,4 +145,20 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    font-size: 18px;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }

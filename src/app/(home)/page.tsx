@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { DropletIcon, LightbulbIcon, MilestoneIcon } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -50,18 +51,20 @@ export default function HomePage() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
+            <Button asChild className="px-6 py-3 w-full sm:w-auto">
+              <Link
+                href="/docs"
+                // className="rounded-lg px-6 py-3 text-lg font-semibold text-primary-foreground bg-primary hover:bg-primary/80 shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 w-full sm:w-auto text-center"
+              >
+                Start Reading the Guide
+              </Link>
+            </Button>
             <Link
-              href="/docs"
-              className="rounded-lg px-6 py-3 text-lg font-semibold text-primary-foreground bg-primary hover:bg-primary/80 shadow-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 w-full sm:w-auto text-center"
-            >
-              Start Reading the Guide
-            </Link>
-            <a
               href="#principles"
               className="text-lg font-semibold leading-6 hover:text-primary transition-colors duration-150 py-3 w-full sm:w-auto text-center"
             >
               Our Guiding Principles <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </main>
