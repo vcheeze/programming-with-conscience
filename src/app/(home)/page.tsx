@@ -129,7 +129,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* <section className="py-16 md:py-32">
+      <section className="py-16 md:py-32">
         <div className="mx-auto max-w-5xl border-t px-6">
           <span className="text-caption -ml-6 -mt-3.5 block w-max px-6 bg-background">
             Team
@@ -184,9 +184,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* 4. Footer (Minimalist) */}
       <footer className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-muted-foreground">
         <p>
           &copy; 2025 Program with Conscience (PwC). Built for clarity and
