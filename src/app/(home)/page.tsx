@@ -81,6 +81,67 @@ export default function HomePage() {
         </div>
       </main>
 
+      {/* <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
+            <div className="@container mx-auto max-w-5xl px-6">
+                <div className="text-center">
+                    <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Built to cover your needs</h2>
+                    <p className="mt-4">Libero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.</p>
+                </div>
+                <Card className="@min-4xl:max-w-full @min-4xl:grid-cols-3 @min-4xl:divide-x @min-4xl:divide-y-0 mx-auto mt-8 grid max-w-sm divide-y overflow-hidden shadow-zinc-950/5 *:text-center md:mt-16">
+                    <div className="group shadow-zinc-950/5">
+                        <CardHeader className="pb-3">
+                            <CardDecorator>
+                                <Zap
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="mt-6 font-medium">Customizable</h3>
+                        </CardHeader>
+
+                        <CardContent>
+                            <p className="text-sm">Extensive customization options, allowing you to tailor every aspect to meet your specific needs.</p>
+                        </CardContent>
+                    </div>
+
+                    <div className="group shadow-zinc-950/5">
+                        <CardHeader className="pb-3">
+                            <CardDecorator>
+                                <Settings2
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="mt-6 font-medium">You have full control</h3>
+                        </CardHeader>
+
+                        <CardContent>
+                            <p className="mt-3 text-sm">From design elements to functionality, you have complete control to create a unique and personalized experience.</p>
+                        </CardContent>
+                    </div>
+
+                    <div className="group shadow-zinc-950/5">
+                        <CardHeader className="pb-3">
+                            <CardDecorator>
+                                <Sparkles
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="mt-6 font-medium">Powered By AI</h3>
+                        </CardHeader>
+
+                        <CardContent>
+                            <p className="mt-3 text-sm">Elements to functionality, you have complete control to create a unique experience.</p>
+                        </CardContent>
+                    </div>
+                </Card>
+            </div>
+        </section> */}
+
       <section id="principles" className="py-12 md:py-20">
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
@@ -88,9 +149,11 @@ export default function HomePage() {
               What Sets <span className="text-primary">PwC</span> Apart?
             </h2>
             <p>
-              Lyra is evolving to be more than just the models. It supports an
-              entire to the APIs and platforms helping developers and businesses
-              innovate.
+              We <span className="text-muted-foreground">(used to)</span> work
+              for a company called PwC (ANY similarity to our website name is
+              PURELY coincidental). Combined, we have 15+ years of experience
+              and have experienced our fair share of horror stories and are here
+              to tell you about it.
             </p>
           </div>
 
