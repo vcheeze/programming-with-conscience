@@ -4,11 +4,18 @@ import {
   MilestoneIcon,
   MoveRightIcon,
 } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
 import Features from "@/components/features";
+import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Programming with Conscience",
+  description:
+    "An where we dissect common programming anti-patterns and pet peeves, drawn from years of reviewing and writing enterprise-grade code getting to production",
+};
 
 export default function HomePage() {
   const members = [
@@ -55,11 +62,10 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto">
-            This is an{" "}
-            <strong className="text-foreground">opinionated guide</strong> where
-            we dissect common programming anti-patterns and pet peeves, drawn
-            from years of reviewing and writing enterprise-grade code getting to
-            production.
+            An <strong className="text-foreground">opinionated guide</strong>{" "}
+            where we dissect common programming anti-patterns and pet peeves,
+            drawn from years of reviewing and writing enterprise-grade code
+            getting to production.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
@@ -214,7 +220,7 @@ export default function HomePage() {
 
       <footer className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-muted-foreground">
         <p>
-          &copy; 2025 Program with Conscience (PwC). Built for clarity and
+          &copy; 2025 Programming with Conscience (PwC). Built for clarity and
           quality.
         </p>
       </footer>
