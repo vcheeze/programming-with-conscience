@@ -111,56 +111,6 @@ export default function HomePage() {
         ]}
       />
 
-      {/* <section id="principles" className="py-12 md:py-20">
-        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-          <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
-            <h2 className="text-balance text-4xl font-medium lg:text-5xl">
-              What Sets <span className="text-primary">PwC</span> Apart?
-            </h2>
-            <p>
-              We <span className="text-muted-foreground">(used to)</span> work
-              for a company called PwC (ANY similarity to our website name is
-              PURELY coincidental). Combined, we have 15+ years of experience
-              and have experienced our fair share of horror stories and are here
-              to tell you about it.
-            </p>
-          </div>
-
-          <div className="relative mx-auto grid max-w-4xl divide-x divide-y border *:p-12 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <LightbulbIcon className="size-4" />
-                <h3 className="text-sm font-medium">Operational Insight</h3>
-              </div>
-              <p className="text-sm">
-                Our focus is on pitfalls run into ourselves—issues that break
-                production systems, not just formatting rules.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <CpuIcon className="size-4" />
-                <h3 className="text-sm font-medium">Beyond Static Analysis</h3>
-              </div>
-              <p className="text-sm">
-                We go above and beyond what ESLint or linters tell you, focusing
-                on subtle design and performance anti-patterns.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <MilestoneIcon className="size-4" />
-                <h3 className="text-sm font-medium">Opinionated & Direct</h3>
-              </div>
-              <p className="text-sm">
-                We offer clear, actionable recommendations based on years of
-                experience writing and reviewing complex software systems.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="py-16 md:py-32">
         <div className="mx-auto max-w-5xl border-t px-6">
           <span className="text-caption -ml-6 -mt-3.5 block w-max px-6 bg-background">
@@ -182,30 +132,30 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-12 md:mt-24">
-            <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:gridstil-cols-3">
               {members.map((member, index) => (
                 <div key={member.id} className="group overflow-hidden">
                   <Image
                     alt="team member"
-                    className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
+                    className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl sm:h-[22.5rem] sm:rounded-xl"
                     height="800"
                     src={member.avatar}
                     width="800"
                   />
                   <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
                     <div className="flex justify-between">
-                      <h3 className="text-base font-medium transition-all duration-500 group-hover:tracking-wider">
+                      <h3 className="text-base font-medium transition-all duration-500 group-hover:tracking-wider sm:tracking-wider">
                         {member.name}
                       </h3>
                       <span className="text-xs">_0{index + 1}</span>
                     </div>
                     <div className="mt-1 flex items-center justify-between">
-                      <span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                      <span className="text-muted-foreground inline-block md:translate-y-6 text-sm md:opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:translate-y-0 sm:opacity-100">
                         {member.role}
                       </span>
                       <Link
                         href={member.link}
-                        className="group-hover:text-primary dark:group-hover:text-primary/80 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100"
+                        className="group-hover:text-primary inline-block md:translate-y-8 text-sm tracking-wide md:opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100 sm:underline sm:translate-y-0 sm:opacity-100"
                       >
                         LinkedIn
                       </Link>
