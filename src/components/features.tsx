@@ -22,14 +22,14 @@ export default function Features({
             you about it.
           </p>
         </div>
-        <Card className="@min-4xl:max-w-full @min-4xl:grid-cols-3 @min-4xl:divide-x @min-4xl:divide-y-0 mx-auto mt-8 grid max-w-sm divide-y overflow-hidden *:text-center md:mt-16 bg-background rounded-none shadow-none">
+        <Card className="pb-0 md:pb-6 @min-4xl:max-w-full @min-4xl:grid-cols-3 @min-4xl:divide-x @min-4xl:divide-y-0 mx-auto mt-8 grid max-w-sm divide-y overflow-hidden *:text-center md:mt-16 bg-background rounded-none shadow-none">
           {features.map((feature) => (
             <div key={feature.title} className="group">
               <CardHeader className="pb-3">
                 <CardDecorator>{feature.icon}</CardDecorator>
                 <h3 className="mt-6 font-medium">{feature.title}</h3>
               </CardHeader>
-              <CardContent>
+              <CardContent className="max-sm:pb-6">
                 <p className="text-sm">{feature.description}</p>
               </CardContent>
             </div>
