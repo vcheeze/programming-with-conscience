@@ -127,35 +127,35 @@ export default function HomePage() {
                 then, we assume we are right.
               </p>
               <p className="text-muted-foreground text-xs">
-                * actually, in order of age
+                * actually, in order of age and, for some reason, level of zoom
               </p>
             </div>
           </div>
           <div className="mt-12 md:mt-24">
-            <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:gridstil-cols-3">
+            <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
               {members.map((member, index) => (
                 <div key={member.id} className="group overflow-hidden">
                   <Image
                     alt="team member"
-                    className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl sm:h-[22.5rem] sm:rounded-xl"
+                    className="md:h-96 w-full md:rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl h-[22.5rem] rounded-xl"
                     height="800"
                     src={member.avatar}
                     width="800"
                   />
                   <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
                     <div className="flex justify-between">
-                      <h3 className="text-base font-medium transition-all duration-500 group-hover:tracking-wider sm:tracking-wider">
+                      <h3 className="text-base font-medium transition-all duration-500 group-hover:tracking-wider max-sm:tracking-wider">
                         {member.name}
                       </h3>
                       <span className="text-xs">_0{index + 1}</span>
                     </div>
                     <div className="mt-1 flex items-center justify-between">
-                      <span className="text-muted-foreground inline-block md:translate-y-6 text-sm md:opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:translate-y-0 sm:opacity-100">
+                      <span className="text-muted-foreground inline-block md:translate-y-6 text-sm md:opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 translate-y-0 opacity-100">
                         {member.role}
                       </span>
                       <Link
                         href={member.link}
-                        className="group-hover:text-primary inline-block md:translate-y-8 text-sm tracking-wide md:opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100 sm:underline sm:translate-y-0 sm:opacity-100"
+                        className="group-hover:text-primary inline-block md:translate-y-8 text-sm tracking-wide md:opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100 max-sm:underline translate-y-0 opacity-100 max-sm:text-primary"
                       >
                         LinkedIn
                       </Link>
