@@ -70,19 +70,19 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
             <Button
-              asChild
+              render={<Link href="/docs"/>}
               className="px-6 h-12 w-full sm:w-auto text-lg font-semibold"
             >
-              <Link href="/docs">Start Reading the Guide</Link>
+              Start Reading the Guide
             </Button>
             <Button
-              asChild
+              render={<Link href="#principles"/>}
               variant="ghost"
               className="px-6 h-12 w-full sm:w-auto text-lg font-semibold"
             >
-              <Link href="#principles">
+              
                 Our Guiding Principles <MoveRightIcon />
-              </Link>
+              
             </Button>
           </div>
         </div>
