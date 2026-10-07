@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+import peter from "@/assets/images/peter.jpg";
+import tarik from "@/assets/images/tarik.jpg";
+import zaid from "@/assets/images/zaid.jpg";
 import Features from "@/components/features";
 import { Button } from "@/components/ui/button";
 
@@ -23,24 +26,21 @@ export default function HomePage() {
       id: 1,
       name: "Zaid H.",
       role: "Tech Lead",
-      avatar:
-        "https://media.licdn.com/dms/image/v2/D4D03AQHMz9IMUUI6lg/profile-displayphoto-shrink_800_800/B4DZdOzw4LGkAk-/0/1749373882544?e=1765411200&v=beta&t=-h46I7O_hVPGOKCBf3LSQfXq84QwrjNp8te6m4PgRZo",
+      avatar: zaid,
       link: "https://linkedin.com/in/zaid-hassan-ithaca",
     },
     {
       id: 2,
       name: "Tarik Z.",
       role: "???",
-      avatar:
-        "https://media.licdn.com/dms/image/v2/D4D03AQGJ-6M3_3BmTA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680726102874?e=1765411200&v=beta&t=0752z9tJ07sUpqMWkFxTb3LSz9x5acVQ1D1LJoFqXhs",
+      avatar: tarik,
       link: "https://www.linkedin.com/in/tarik-zulfikarpasic/",
     },
     {
       id: 3,
       name: "Peter C.",
       role: "Lead SWE",
-      avatar:
-        "https://media.licdn.com/dms/image/v2/D4D03AQGxV8JC2d-CnQ/profile-displayphoto-crop_800_800/B4DZqgWZ7PKIAI-/0/1763626819928?e=1765411200&v=beta&t=xP9ouFRGXXhUEbAKrm-Xul49dA5zLHcKdqOyTRiWXwM",
+      avatar: peter,
       link: "https://linkedin.com/in/peterweichen",
     },
   ];
@@ -136,11 +136,9 @@ export default function HomePage() {
               {members.map((member, index) => (
                 <div key={member.id} className="group overflow-hidden">
                   <Image
-                    alt="team member"
+                    alt={member.name}
                     className="md:h-96 w-full md:rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl h-[22.5rem] rounded-xl"
-                    height="800"
                     src={member.avatar}
-                    width="800"
                   />
                   <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
                     <div className="flex justify-between">
@@ -170,7 +168,7 @@ export default function HomePage() {
 
       <footer className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-muted-foreground">
         <p>
-          &copy; 2025 Programming with Conscience (PwC). Built for clarity and
+          &copy; 2026 Programming with Conscience (PwC). Built for clarity and
           quality.
         </p>
       </footer>

@@ -17,7 +17,7 @@ export default function Features({
           <p className="mt-4">
             We <span className="text-muted-foreground">(used to)</span> work for
             a company called PwC (ANY similarity to our website name is PURELY
-            coincidental). Combined, we have 15+ years of experience and have
+            coincidental). Combined, we have 20+ years of experience and have
             experienced our fair share of horror stories and are here to tell
             you about it.
           </p>
