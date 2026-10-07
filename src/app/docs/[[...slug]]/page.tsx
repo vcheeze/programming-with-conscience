@@ -27,22 +27,26 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
-      {byline ? (
-        <p className="mt-1 text-fd-muted-foreground text-sm">By {byline}</p>
-      ) : null}
-      <DocsDescription className={byline ? "mt-2 mb-0" : "mb-0"}>
+      <DocsDescription className="mb-0">
         {page.data.description}
       </DocsDescription>
-      {page.data.lastModified && (
-        <p className="text-fd-muted-foreground text-end text-xs italic">
-          Last Updated:{" "}
-          {new Date(page.data.lastModified).toLocaleDateString(undefined, {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })}
-        </p>
-      )}
+      {byline || page.data.lastModified ? (
+        <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          {byline ? (
+            <p className="text-fd-muted-foreground text-sm">By {byline}</p>
+          ) : null}
+          {page.data.lastModified ? (
+            <p className="ml-auto text-fd-muted-foreground text-xs italic">
+              Last Updated:{" "}
+              {new Date(page.data.lastModified).toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
       <DocsBody className="mt-8">
         <MDX
           components={getMDXComponents({
