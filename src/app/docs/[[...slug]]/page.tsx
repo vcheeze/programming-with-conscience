@@ -4,7 +4,7 @@ import {
   DocsDescription,
   DocsPage,
   DocsTitle,
-} from "fumadocs-ui/page";
+} from "fumadocs-ui/layouts/spacious/page";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPageImage, source } from "@/lib/source";
