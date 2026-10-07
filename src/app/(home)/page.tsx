@@ -53,7 +53,7 @@ export default function HomePage() {
             PROGRAMMING with CONSCIENCE (PwC)
           </p>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight">
             Beyond{" "}
             <span className="text-primary hover:text-primary/80">Linters</span>
             .
@@ -70,19 +70,18 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
             <Button
-              render={<Link href="/docs"/>}
               className="px-6 h-12 w-full sm:w-auto text-lg font-semibold"
             >
-              Start Reading the Guide
+              <Link href="/docs">Start Reading the Guide</Link>
             </Button>
             <Button
-              render={<Link href="#principles"/>}
               variant="ghost"
               className="px-6 h-12 w-full sm:w-auto text-lg font-semibold"
             >
-              
-                Our Guiding Principles <MoveRightIcon />
-              
+              <Link href="#principles">
+                Our Guiding Principles
+              </Link>
+              <MoveRightIcon />
             </Button>
           </div>
         </div>
@@ -118,7 +117,7 @@ export default function HomePage() {
           </span>
           <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
             <div className="sm:w-2/5">
-              <h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
+              <h2 className="text-3xl font-semibold sm:text-4xl">Our dream team</h2>
             </div>
             <div className="mt-6 sm:mt-0">
               <p>

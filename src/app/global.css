@@ -175,3 +175,9 @@
 #fd-spacious-layout #nd-sidebar {
   background-color: transparent;
 }
+
+/* Fumadocs prose sets h1 to 800 and bold text inside h2 to 800. */
+.prose :is(h1, h2, h3, h4, h5, h6),
+.prose :is(h1, h2, h3, h4) :is(strong) {
+  font-weight: 600;
+}

@@ -4,3 +4,97 @@ description: The dos and the don'ts.
 icon: Library
 authors: []
 ---
+
+These are the habits we keep coming back to when writing and reviewing production code.
+
+## CSS and layout
+
+<Cards>
+  <Card title="Avoid Bootstrap" href="/docs/guides/avoid-bootstrap">
+    Opinionated classes cost you control later.
+  </Card>
+  <Card title="Avoid Inline Styles" href="/docs/guides/avoid-inline-styles">
+    Shared class names are easier to override and keep consistent.
+  </Card>
+  <Card title="Use CSS Class Names" href="/docs/guides/use-css-class-names">
+    Anything you style should have a class.
+  </Card>
+  <Card title="Use CSS Variables" href="/docs/guides/use-css-variables">
+    Prefer CSS variables over Sass variables.
+  </Card>
+  <Card title="Shared Sass Utilities" href="/docs/guides/shared-sass-utilities">
+    Split mixins, variables, and classes into their own files.
+  </Card>
+  <Card title="RTL Support" href="/docs/guides/rtl-support">
+    Direction changes should be a small CSS change.
+  </Card>
+  <Card title="Standardized Typography" href="/docs/guides/standardized-typography">
+    One component per heading and paragraph style.
+  </Card>
+  <Card title="Truncating Text" href="/docs/guides/text-truncating-in-html">
+    Put the full string in the `title` attribute.
+  </Card>
+</Cards>
+
+## React
+
+<Cards>
+  <Card title="dontUseEffect" href="/docs/guides/dontuseeffect">
+    Most effects are a custom hook, `useMemo`, or `useReducer`.
+  </Card>
+  <Card title="Encapsulate Hook Logic" href="/docs/guides/encapsulate-hook-logic">
+    Keep a custom hook's behavior inside one helper.
+  </Card>
+  <Card title="Don't Pass Setters as Props" href="/docs/guides/do-not-pass-state-setters-as-props-to-child-components">
+    Pass handlers. Keep the update next to the state.
+  </Card>
+  <Card title="Boolean Props" href="/docs/guides/boolean-props">
+    Boolean props should default to `false`.
+  </Card>
+  <Card title="Don't Jump Straight into Redux" href="/docs/guides/dont-jump-straight-in-bed-with-redux">
+    Reach for local state before a global store.
+  </Card>
+  <Card title="Identify Reusable Components" href="/docs/guides/identify-reusable-components">
+    Spot the shared UI before you copy it.
+  </Card>
+</Cards>
+
+## APIs and data
+
+<Cards>
+  <Card title="Reusable API Wrappers" href="/docs/guides/reusable-api-wrappers">
+    One HTTP client for auth, errors, and retries.
+  </Card>
+  <Card title="Centralized API Routes" href="/docs/guides/centralized-api-routes">
+    Keep every route in one file.
+  </Card>
+  <Card title="Objectify Function Params" href="/docs/guides/objectify-function-params">
+    Many optional arguments belong in one object.
+  </Card>
+  <Card title="Promise.all" href="/docs/guides/promise-all-is-your-friend">
+    Independent work should run in parallel.
+  </Card>
+  <Card title="Web Storage" href="/docs/guides/web-storage">
+    Know what `localStorage` and `sessionStorage` are for.
+  </Card>
+  <Card title="Moment.js Is Done" href="/docs/guides/moment-is-dead">
+    The library is finished. Its replacements are not.
+  </Card>
+</Cards>
+
+## Working with people
+
+<Cards>
+  <Card title="Document Pull Requests" href="/docs/guides/document-pull-requests">
+    Screenshots, tickets, and commits a reviewer can follow.
+  </Card>
+  <Card title={'Don\'t Just Say "Hello!"'} href="/docs/guides/dont-just-say-hello">
+    Lead with the ask.
+  </Card>
+  <Card title="Write As Few Comments As You Can" href="/docs/guides/write-as-few-comments-as-you-can">
+    Clear code beats a paragraph above it.
+  </Card>
+  <Card title="Learn Progressive Enhancement" href="/docs/guides/learn-progressive-enhancement">
+    Make it work before you make it fancy.
+  </Card>
+</Cards>
